@@ -1,0 +1,203 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#panels{
+    display: flex;
+    flex-direction:column;
+}
+.panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(124, 145, 202, 0.15);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    background-color: rgb(36, 39, 63);
+    justify-content: space-around;
+}
+.menu li {
+    user-select: none;
+    text-transform: uppercase;
+}
+.menu a {
+    color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-family: "Inter", "sans-serif";
+    font-weight: 600;
+    white-space: nowrap;
+}
+.menu a:hover{
+    color: #fff;
+}
+.menu .active {
+    background-color: #2392f0;
+    border-radius: 8px;
+}
+.menu .active a {
+    color: #FFF;
+}
+
+
+.playerImg, .monsterImg{
+    cursor: pointer;
+    user-select: none;
+    max-height: 500px;
+    max-width: 500px;
+}
+.playerImg.lose, .monsterImg.lose{
+    cursor: pointer;
+    user-select: none;
+    max-height: 700px;
+    max-width: 300px;
+}
+.score{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.monsterName, .playerName{
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'IM Fell English SC', serif;
+}
+.progress{
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+
+.win{
+    cursor: pointer;
+    user-select: none;
+    color: #313280;
+    text-transform: uppercase;
+    font-family: 'Rampart One', 'cursive';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.lose{
+    cursor: pointer;
+    user-select: none;
+    color: #862e2e;
+    text-transform: uppercase;
+    font-family: 'Rampart One', 'cursive';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.draw{
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    font-family: 'Rampart One', 'cursive';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+.logs ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.logs ul li{
+    display: flex;
+    justify-content: center;
+    margin: 4px 0px;
+    padding: 3px 0px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+.player{
+    cursor: pointer;
+    user-select: none;
+    color: #313280;
+    font-family: 'Rampart One', 'sans-serif';
+}
+.monster{ 
+    cursor: pointer;
+    user-select: none;
+    color: #862e2e;
+    font-family: 'Rampart One', 'sans-serif';
+}
+
+
+.action-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+
+@keyframes flip-out {
+	from { transform: rotateY(0deg); }
+	to { transform: rotateY(90deg); }
+}
+@keyframes flip-in {
+	from { transform: rotateY(90deg); }
+	to { transform: rotateY(0deg); }
+}
+.flip-enter-active {
+	animation: flip-in 0.3s ease;
+}
+.flip-leave-active {
+	animation: flip-out 0.3s ease;
+}
+
+@keyframes flipgroup-out {
+	from { transform: rotateY(0deg); }
+	to { transform: rotateY(90deg); }
+}
+@keyframes flipgroup-in {
+	from { transform: rotateY(90deg); }
+	to { transform: rotateY(0deg); }
+}
+.flipgroup-enter-active {
+	animation: flipgroup-in 0.3s ease;
+}
+.flipgroup-leave-active {
+    position: absolute;
+    display: none;
+    width: 100%;
+	animation: flipgroup-out 0.1s ease;
+}
+.flipgroup-move {
+    transition: 0.1s;
+}
